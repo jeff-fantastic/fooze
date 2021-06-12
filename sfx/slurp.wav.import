@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/slurp.wav-c91151445180f8f2908de5d3752b475b.sample"
+
+[deps]
+
+source_file="res://sfx/slurp.wav"
+dest_files=[ "res://.import/slurp.wav-c91151445180f8f2908de5d3752b475b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
