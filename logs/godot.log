@@ -1,0 +1,8 @@
+Godot Engine v3.3.stable.official - https://godotengine.org
+OpenGL ES 3.0 Renderer: GeForce GTX 1080 Ti/PCIe/SSE2
+OpenGL ES Batching: ON
+ 
+**ERROR**: (Node not found: "player" (relative to "/root").)
+   At: scene/main/node.cpp:1371:get_node() - Condition "!node" is true. Returned: __null
+**ERROR**: (Node not found: "bg/prog_bar" (relative to "/root/ui").)
+   At: scene/main/node.cpp:1371:get_node() - Condition "!node" is true. Returned: __null
