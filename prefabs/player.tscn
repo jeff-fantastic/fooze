@@ -24,7 +24,6 @@ script = ExtResource( 1 )
 
 [node name="vis" type="Polygon2D" parent="."]
 position = Vector2( 0.0879364, -0.151222 )
-scale = Vector2( 0.818579, 0.821886 )
 polygon = PoolVector2Array( 7.50257, 28.2053, -0.402382, 29.3851, -7.95338, 28.4412, -14.7965, 25.6096, -20.8137, 21.0082, -25.533, 14.991, -28.3647, 8.14793, -29.4265, 0.242989, -28.2467, -7.07204, -25.1791, -14.0331, -21.1676, -19.9323, -14.6785, -25.0057, -7.12749, -28.0732, 0.305527, -29.0171, 7.85652, -28.1912, 15.1715, -25.1236, 21.1887, -20.4043, 25.2002, -14.859, 27.7959, -8.72382, 29.2117, 0.125004, 28.2678, 7.44003, 25.5542, 14.5191, 20.8348, 20.7723, 14.6996, 25.4916 )
 
 [node name="face" type="Sprite" parent="vis"]
@@ -51,5 +50,7 @@ zoom = Vector2( 2, 2 )
 position = Vector2( 8, 0 )
 
 [node name="sfx" type="Node2D" parent="."]
+
+[node name="tween" type="Tween" parent="."]
 
 [connection signal="body_entered" from="col/detector" to="." method="_on_detector_body_entered"]

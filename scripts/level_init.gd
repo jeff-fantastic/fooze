@@ -17,4 +17,4 @@ func _ready():
 	# then the cursor
 	var new_cursor = CURSOR.instance()
 	add_child(new_cursor)
-	
+

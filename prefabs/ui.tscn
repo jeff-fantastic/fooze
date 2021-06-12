@@ -37,8 +37,9 @@ __meta__ = {
 
 [node name="level" type="Label" parent="title_cent"]
 margin_left = 146.0
+margin_top = 7.0
 margin_right = 213.0
-margin_bottom = 43.0
+margin_bottom = 32.0
 custom_fonts/font = ExtResource( 2 )
 text = "Level 1
 Mega World"
@@ -56,14 +57,16 @@ margin_left = -180.0
 margin_top = -28.0
 margin_right = 180.0
 margin_bottom = 3.99998
+custom_constants/separation = 0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="gloop" type="Label" parent="gloop_cent"]
+margin_top = 5.0
 margin_right = 360.0
-margin_bottom = 20.0
+margin_bottom = 16.0
 custom_fonts/font = ExtResource( 2 )
 text = "Gloop"
 align = 1
@@ -73,9 +76,9 @@ __meta__ = {
 
 [node name="prog_bar" type="ProgressBar" parent="gloop_cent"]
 margin_left = 60.0
-margin_top = 24.0
+margin_top = 16.0
 margin_right = 300.0
-margin_bottom = 34.0
+margin_bottom = 26.0
 rect_min_size = Vector2( 240, 10 )
 size_flags_horizontal = 4
 custom_styles/fg = SubResource( 1 )

@@ -14,12 +14,20 @@ config/name="Fooze"
 run/main_scene="res://testing.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Transit="*res://addons/transit/Transit.tscn"
+
 [display]
 
 window/size/width=360
 window/size/height=240
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray(  )
 
 [input]
 
