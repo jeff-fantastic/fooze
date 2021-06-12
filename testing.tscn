@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://scripts/level_init.gd" type="Script" id=1]
 [ext_resource path="res://prefabs/ui.tscn" type="PackedScene" id=2]
 [ext_resource path="res://prefabs/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/cursor.png" type="Texture" id=4]
+[ext_resource path="res://scripts/cursor.gd" type="Script" id=5]
 
 [node name="testing" type="Node2D"]
+script = ExtResource( 1 )
+LEVEL_NAME = "Test Level"
 
 [node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 136, 112 )
@@ -22,3 +27,8 @@ color = Color( 0.54902, 0.54902, 0.54902, 1 )
 polygon = PoolVector2Array( 9.77299, 19.4674, 136.822, 38.9348, 273.645, 29.2011, 361.602, -9.7337, 517.971, -9.7337, 596.155, -87.6033, 596.155, -165.473, 752.523, -165.473, 752.523, 389.348, -185.688, 389.348, -185.688, -97.337 )
 
 [node name="ui" parent="." instance=ExtResource( 2 )]
+
+[node name="cursor" type="Sprite" parent="."]
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
