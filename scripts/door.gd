@@ -32,4 +32,3 @@ func _process(_delta):
 		global_position = lerp(global_position, TOP_COORD, 0.1)
 	else:
 		global_position = lerp(global_position, BOTTOM_COORD, 0.1)
-
