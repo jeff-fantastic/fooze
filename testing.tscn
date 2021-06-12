@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
+[ext_resource path="res://prefabs/Button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/ui.tscn" type="PackedScene" id=2]
 [ext_resource path="res://prefabs/player.tscn" type="PackedScene" id=3]
 
@@ -22,3 +23,6 @@ color = Color( 0.54902, 0.54902, 0.54902, 1 )
 polygon = PoolVector2Array( 9.77299, 19.4674, 136.822, 38.9348, 273.645, 29.2011, 361.602, -9.7337, 517.971, -9.7337, 596.155, -87.6033, 596.155, -165.473, 752.523, -165.473, 752.523, 389.348, -185.688, 389.348, -185.688, -97.337 )
 
 [node name="ui" parent="." instance=ExtResource( 2 )]
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 393.497, 117.484 )
