@@ -93,38 +93,38 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 6 )
 region = Rect2( 0, 16, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 6 )
 region = Rect2( 0, 32, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=22]
 atlas = ExtResource( 6 )
 region = Rect2( 0, 48, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=23]
 atlas = ExtResource( 6 )
 region = Rect2( 0, 64, 16, 16 )
 
-[sub_resource type="SpriteFrames" id=25]
+[sub_resource type="SpriteFrames" id=24]
 animations = [ {
-"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 26 ) ],
+"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
 "loop": false,
 "name": "suck",
 "speed": 10.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 32, 32 )
 
-[sub_resource type="CircleShape2D" id=20]
+[sub_resource type="CircleShape2D" id=26]
 radius = 160.0
 
 [node name="exitdoor" type="Area2D"]
@@ -139,16 +139,15 @@ playing = true
 [node name="pop" type="AnimatedSprite" parent="."]
 visible = false
 scale = Vector2( 2, 2 )
-frames = SubResource( 25 )
-animation = "New Anim"
+frames = SubResource( 24 )
 
 [node name="col" type="CollisionShape2D" parent="."]
-shape = SubResource( 19 )
+shape = SubResource( 25 )
 
 [node name="radius" type="Area2D" parent="col"]
 
 [node name="col" type="CollisionShape2D" parent="col/radius"]
-shape = SubResource( 20 )
+shape = SubResource( 26 )
 
 [node name="door_open" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
