@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://prefabs/ui.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/player.tscn" type="PackedScene" id=3]
+
+[node name="testing" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 136, 112 )
+
+[node name="terrain" type="StaticBody2D" parent="."]
+
+[node name="col" type="CollisionPolygon2D" parent="terrain"]
+position = Vector2( 24, 136 )
+scale = Vector2( 0.818579, 0.821886 )
+polygon = PoolVector2Array( -185.688, -97.337, 9.77299, 19.4674, 136.822, 38.9348, 273.645, 29.2011, 361.602, -9.7337, 517.971, -9.7337, 596.155, -87.6033, 596.155, -165.473, 752.523, -165.473, 752.523, 146.006, -185.688, 146.006 )
+
+[node name="vis" type="Polygon2D" parent="terrain"]
+position = Vector2( 24, 136 )
+scale = Vector2( 0.818579, 0.821886 )
+color = Color( 0.54902, 0.54902, 0.54902, 1 )
+polygon = PoolVector2Array( 9.77299, 19.4674, 136.822, 38.9348, 273.645, 29.2011, 361.602, -9.7337, 517.971, -9.7337, 596.155, -87.6033, 596.155, -165.473, 752.523, -165.473, 752.523, 389.348, -185.688, 389.348, -185.688, -97.337 )
+
+[node name="ui" parent="." instance=ExtResource( 2 )]
