@@ -10,7 +10,7 @@ func _ready():
 	
 func _physics_process(delta):
 	$vis.scale = lerp($vis.scale, Vector2(TARGET_SCALE, TARGET_SCALE), 0.05)
-	$col.scale = lerp($col.scale, Vector2(TARGET_SCALE, TARGET_SCALE) * 10.0, 0.05)
+	$col.scale = lerp($col.scale, Vector2(TARGET_SCALE, TARGET_SCALE) * 7.0, 0.05)
 
 func _on_cooldown_timeout():
 	ENABLED = true
