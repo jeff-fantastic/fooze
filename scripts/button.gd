@@ -1,7 +1,8 @@
 extends Area2D
 
-export (int) var ID = 0
-
+export (int) var SENDER_ID = 0
+signal button_enabled
+signal button_disabled
 var ON = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,8 +15,11 @@ func _process(_delta):
 func _on_button_body_entered(body):
 	if body in KinematicBody2D or RigidBody2D:
 		ON = true
+		emit_signal("button_enabled", SENDER_ID)
 
 func _on_button_body_exited(body):
 	if body in KinematicBody2D or RigidBody2D:
 		if get_overlapping_bodies() == []:
 			ON = false
+			emit_signal("button_disabled", SENDER_ID)
+

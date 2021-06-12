@@ -13,7 +13,7 @@ func _physics_process(_delta):
 	$camera.zoom = Vector2(clamp(lerp($camera.zoom.x, GOO_AMOUNT / 25, 0.01), 1, 3), clamp(lerp($camera.zoom.y, GOO_AMOUNT / 25, 0.01), 1, 3))
 	$spawn_gimbal.scale = Vector2(clamp(lerp($spawn_gimbal.scale.x, GOO_AMOUNT / 50, 0.05), 0.2, 2), clamp(lerp($spawn_gimbal.scale.y, GOO_AMOUNT / 50, 0.05), 0.2, 2))
 	$spawn_gimbal.look_at(get_global_mouse_position())
-	mass = clamp(GOO_AMOUNT / 50, 0.5, 1.5)
+	mass = clamp(GOO_AMOUNT / 50, 1, 1.5)
 	if $sfx.get_child_count() > 0: # sound cleanup
 		var children = $sfx.get_children()
 		for i in $sfx.get_child_count():
