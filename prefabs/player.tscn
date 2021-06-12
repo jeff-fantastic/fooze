@@ -15,6 +15,7 @@ radius = 25.5
 
 [node name="player" type="RigidBody2D"]
 collision_layer = 0
+collision_mask = 9
 physics_material_override = SubResource( 1 )
 gravity_scale = 4.0
 continuous_cd = 2

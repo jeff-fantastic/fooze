@@ -6,7 +6,7 @@ var TARGET_SCALE = 0.1
 
 func _ready():
 	var dir = (get_global_mouse_position() - global_position).normalized()
-	apply_central_impulse(dir * 256)
+	apply_central_impulse(dir * 512)
 	
 func _physics_process(_delta):
 	$vis.scale = lerp($vis.scale, Vector2(TARGET_SCALE, TARGET_SCALE), 0.05)
