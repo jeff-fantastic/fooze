@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/level_init.gd" type="Script" id=1]
+[ext_resource path="res://prefabs/Door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://prefabs/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://prefabs/Button.tscn" type="PackedScene" id=4]
 
@@ -25,3 +26,6 @@ polygon = PoolVector2Array( 9.77299, 19.4674, 136.822, 38.9348, 273.645, 29.2011
 
 [node name="button" parent="." instance=ExtResource( 4 )]
 position = Vector2( 393.497, 117.484 )
+
+[node name="Door" parent="." instance=ExtResource( 2 )]
+position = Vector2( 347.46, 111.965 )
