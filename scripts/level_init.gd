@@ -13,7 +13,7 @@ func _ready():
 		Global.play_song("res://music/Fooze.ogg")
 	# instance the UI first
 	var new_ui = UI.instance()
-	var UI_text = new_ui.get_node("title_cent/level")
+	var UI_text = new_ui.get_node("Layer1/title_cent/level")
 	UI_text.text = "Level " + String(LEVEL_ID) + "\n" + LEVEL_NAME
 	add_child(new_ui)
 	
