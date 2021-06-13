@@ -117,7 +117,7 @@ region = Rect2( 0, 64, 16, 16 )
 animations = [ {
 "frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
 "loop": false,
-"name": "suck",
+"name": "default",
 "speed": 10.0
 } ]
 

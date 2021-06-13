@@ -6,6 +6,8 @@
 extents = Vector2( 13, 10 )
 
 [node name="button" type="Area2D"]
+collision_layer = 14
+collision_mask = 14
 script = ExtResource( 1 )
 
 [node name="vis" type="ColorRect" parent="."]

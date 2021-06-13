@@ -1,9 +1,24 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://addons/transit/Transit.gd" type="Script" id=1]
 
 [sub_resource type="Animation" id=1]
-resource_name = "fade"
+resource_name = "New Anim"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=2]
 step = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/ColorRect:color:a")
@@ -27,7 +42,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/fade = SubResource( 1 )
+"anims/New Anim" = SubResource( 1 )
+anims/fade = SubResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 128

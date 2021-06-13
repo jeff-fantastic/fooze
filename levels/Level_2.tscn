@@ -11,17 +11,20 @@ LEVEL_NAME = "Tight Fit"
 
 [node name="exitdoor" parent="." instance=ExtResource( 4 )]
 position = Vector2( 792, 16 )
-WARP_PATH = "res://testing.tscn"
+WARP_PATH = "res://levels/Level_3.tscn"
 
 [node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( -608, -88 )
 
 [node name="terrain" type="StaticBody2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="vis" type="Polygon2D" parent="terrain"]
 color = Color( 0.133333, 0.133333, 0.133333, 1 )
 invert_border = 1754.9
-polygon = PoolVector2Array( -160, -72, -160, 112, 352, 112, 376, 104, 400, 64, 368, 32, 328, 32, 312, 24, 280, 48, 192, 64, 96, 56, 48, 24, 40, -56, 88, -144, 160, -176, 88, -184, 32, -208, -40, -256, -72, -336, -168, -352, -96, -168, -112, -80 )
+polygon = PoolVector2Array( -160, -72, -160, 112, 352, 112, 376, 104, 400, 64, 368, 32, 328, 32, 312, 24, 280, 48, 192, 64, 96, 56, 48, 24, 40, -56, 88, -144, 160, -176, 88, -184, 32, -208, -40, -256, -64, -288, -112, -248, -96, -168, -112, -80 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -44,7 +47,7 @@ __meta__ = {
 
 [node name="col2" type="CollisionPolygon2D" parent="terrain"]
 visible = false
-polygon = PoolVector2Array( -160, -72, -112, -80, -96, -168, -168, -352, -72, -336, -40, -256, 32, -208, 88, -184, 160, -176, 88, -144, 40, -56, 48, 24, 96, 56, 192, 64, 280, 48, 312, 24, 328, 32, 368, 32, 400, 64, 376, 104, 352, 112, -160, 112 )
+polygon = PoolVector2Array( -160, -72, -112, -80, -96, -168, -112, -248, -64, -288, -40, -256, 32, -208, 88, -184, 160, -176, 88, -144, 40, -56, 48, 24, 96, 56, 192, 64, 280, 48, 312, 24, 328, 32, 368, 32, 400, 64, 376, 104, 352, 112, -160, 112 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -52,11 +55,14 @@ __meta__ = {
 [node name="no_player" type="StaticBody2D" parent="."]
 collision_layer = 8
 collision_mask = 8
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="vis" type="Polygon2D" parent="no_player"]
 color = Color( 1, 0, 0, 0.286275 )
 invert_border = 1754.9
-polygon = PoolVector2Array( -168, -352, -368, -376, -216, -472, -24, -504, 96, -416, -72, -336 )
+polygon = PoolVector2Array( -112, -248, -368, -376, -312, -416, -64, -288 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -71,6 +77,9 @@ __meta__ = {
 [node name="no_mass" type="StaticBody2D" parent="."]
 collision_layer = 4
 collision_mask = 4
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="vis" type="Polygon2D" parent="no_mass"]
 visible = false
