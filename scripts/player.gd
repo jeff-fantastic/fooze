@@ -14,7 +14,8 @@ enum STATES {
 var PLAYER_STATE = STATES.ENABLED
 
 func _ready():
-	pass
+	if Global.zark:
+		$vis/hair.visible = true
 
 func _physics_process(_delta):
 	$camera.zoom = Vector2(clamp(lerp($camera.zoom.x, GOO_AMOUNT / 25, 0.01), 2, 3), clamp(lerp($camera.zoom.y, GOO_AMOUNT / 25, 0.01), 2, 3))

@@ -1,5 +1,6 @@
 extends Spatial
-
+var konami_counter = 0
+var konami_code = ["ui_up","ui_up","ui_down","ui_down","ui_left","ui_right","ui_left","ui_right"]
 func _ready():
 	$AnimationPlayer.play("Title")
 	#VisualServer.set_default_clear_color(Color(0,0,0,1.0))
@@ -36,3 +37,17 @@ func _on_sfx_slider_value_changed(value):
 	Global.SFX_volume = $Layer2/sfx_slider.value
 	Global.change_volume()
 	Global.saveConfig()
+
+func _input(event):
+	if event is InputEventKey:
+		if event.pressed:
+			if konami_counter <= konami_code.size()-2:
+				if Input.is_action_just_pressed(konami_code[konami_counter]):
+					konami_counter += 1
+				else:
+					konami_counter = 0
+			else:
+				Global.zark = true
+
+func _process(delta):
+	pass
