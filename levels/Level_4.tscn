@@ -13,22 +13,19 @@ LEVEL_NAME = "Access Point"
 
 [node name="tripwire" parent="." instance=ExtResource( 4 )]
 position = Vector2( -152, -360 )
-collision_mask = 9
 RECIEVER_ID = 1
-RESTART_TARGET = "res://levels/Level_3.tscn"
+RESTART_TARGET = "res://levels/Level_4.tscn"
 IS_RECIEVER = false
 
 [node name="tripwire2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 259.675, -285.439 )
 rotation = -1.309
-collision_mask = 9
-RESTART_TARGET = "res://levels/Level_3.tscn"
+RESTART_TARGET = "res://levels/Level_4.tscn"
 
 [node name="tripwire3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 456, -304 )
 rotation = 1.83259
-collision_mask = 9
-RESTART_TARGET = "res://levels/Level_3.tscn"
+RESTART_TARGET = "res://levels/Level_4.tscn"
 
 [node name="button" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1023.96, -64.3678 )
@@ -36,7 +33,7 @@ scale = Vector2( 8.06573, 3.22709 )
 
 [node name="exitdoor" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1096, -432 )
-WARP_PATH = "res://testing.tscn"
+WARP_PATH = "res://levels/Level_5.tscn\\"
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1112, -528 )

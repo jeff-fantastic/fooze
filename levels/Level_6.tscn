@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/level_init.gd" type="Script" id=1]
+[ext_resource path="res://prefabs/tripwire.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/player.tscn" type="PackedScene" id=4]
+
+[node name="Level_6" type="Node2D"]
+script = ExtResource( 1 )
+LEVEL_ID = 6
+LEVEL_NAME = "Sharpshooting"
+
+[node name="player" parent="." instance=ExtResource( 4 )]
+position = Vector2( -357.339, -212.151 )
+collision_layer = 8
+GOO_AMOUNT = 150.0
+
+[node name="terrain" type="StaticBody2D" parent="."]
+scale = Vector2( 1.25, 1.25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="vis" type="Polygon2D" parent="terrain"]
+color = Color( 0.133333, 0.133333, 0.133333, 1 )
+invert_enable = true
+invert_border = 1754.9
+polygon = PoolVector2Array( -121.6, -128, -147.2, -76.8, -230.4, -57.6, -256, -57.6, -275.2, -102.4, -204.8, -140.8, -371.2, -140.8, -320, -102.4, -332.8, -64, -384, -51.2, -467.2, -134.4, -505.6, -217.6, -473.6, -384, -518.4, -492.8, -499.2, -582.4, -422.4, -550.4, -326.4, -582.4, -326.4, -620.8, -371.2, -640, -448, -633.6, -505.6, -659.2, -595.2, -627.2, -691.2, -633.6, -723.2, -659.2, -710.4, -729.6, -659.2, -774.4, -614.4, -774.4, -518.4, -748.8, -512, -812.8, -473.6, -800, -441.6, -755.2, -422.4, -864, -384, -812.8, -384, -838.4, -364.8, -870.4, -339.2, -896, -268.8, -870.4, -256, -838.4, -224, -896, -160, -851.2, -134.4, -806.4, -115.2, -838.4, -83.2, -800, -83.2, -742.4, -70.4, -774.4, -57.6, -780.8, -38.4, -640, -64, -454.4, -134.4, -416, -224, -448, -224, -409.6, -128, -364.8, -70.4, -371.2, -76.8, -249.6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="vis2" type="Polygon2D" parent="terrain"]
+color = Color( 0.133333, 0.133333, 0.133333, 1 )
+invert_border = 1754.9
+polygon = PoolVector2Array( -345.6, -403.2, -384, -396.8, -403.2, -435.2, -371.2, -460.8, -345.6, -454.4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="vis3" type="Polygon2D" parent="terrain"]
+color = Color( 0.133333, 0.133333, 0.133333, 1 )
+invert_border = 1754.9
+polygon = PoolVector2Array( -179.2, -627.2, -179.2, -582.4, -147.2, -563.2, -102.4, -569.6, -96, -614.4, -128, -640 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="col" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+polygon = PoolVector2Array( -371.2, -140.8, -204.8, -140.8, -275.2, -102.4, -256, -57.6, -230.4, -57.6, -147.2, -76.8, -121.6, -128, -76.8, -249.6, -70.4, -371.2, -128, -364.8, -224, -409.6, -224, -448, -134.4, -416, -64, -454.4, -38.4, -640, -57.6, -780.8, -70.4, -774.4, -83.2, -742.4, -83.2, -800, -115.2, -838.4, -134.4, -806.4, -160, -851.2, -224, -896, -256, -838.4, -268.8, -870.4, -339.2, -896, -364.8, -870.4, -384, -838.4, -384, -812.8, -422.4, -864, -441.6, -755.2, -473.6, -800, -512, -812.8, -518.4, -748.8, -614.4, -774.4, -659.2, -774.4, -710.4, -729.6, -723.2, -659.2, -691.2, -633.6, -595.2, -627.2, -505.6, -659.2, -448, -633.6, -371.2, -640, -326.4, -620.8, -326.4, -582.4, -422.4, -550.4, -499.2, -582.4, -518.4, -492.8, -473.6, -384, -505.6, -217.6, -467.2, -134.4, -384, -51.2, -332.8, -64, -320, -102.4, -313.6, 256, -748.8, 249.6, -736, -1260.8, 128, -1254.4, 115.2, 256, -313.6, 256, -320, -102.4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="col2" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+polygon = PoolVector2Array( -345.6, -403.2, -384, -396.8, -403.2, -435.2, -371.2, -460.8, -345.6, -454.4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="col3" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+polygon = PoolVector2Array( -179.2, -627.2, -179.2, -582.4, -147.2, -563.2, -102.4, -569.6, -96, -614.4, -128, -640 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tripwire" parent="." instance=ExtResource( 3 )]
+position = Vector2( -280.702, -536 )
+rotation = 1.57079
+RESTART_TARGET = "res://levels/Level_6.tscn"
+IS_RECIEVER = false
+
+[node name="tripwire2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -225.684, -752.982 )
+rotation = 1.57079
+RESTART_TARGET = "res://levels/Level_6.tscn"
+IS_RECIEVER = false
