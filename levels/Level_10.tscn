@@ -1,0 +1,316 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://prefabs/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://prefabs/tripwire.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/level_init.gd" type="Script" id=4]
+[ext_resource path="res://prefabs/ExitDoor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://prefabs/gooprefiller.tscn" type="PackedScene" id=6]
+
+[node name="Level_10" type="Node2D"]
+script = ExtResource( 4 )
+LEVEL_ID = 10
+LEVEL_NAME = "A way out"
+
+[node name="exitdoor" parent="." instance=ExtResource( 5 )]
+position = Vector2( -737.287, 4688.43 )
+WARP_PATH = "res://levels/Endscreen.tscn"
+
+[node name="terrain" type="StaticBody2D" parent="."]
+
+[node name="Col" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( 2.66968, -2.66968 )
+polygon = PoolVector2Array( -24.6481, 184.613, 109.068, 183.657, 228.591, 246.434, 375.425, 240.441, 435.383, 166.706, 492.293, 27.6813, 507.427, -125.706, 471.317, -200.061, 371.815, -259.198, 202.301, -301.577, -39.8807, -305.024, -526.47, -331.72, -771.167, -327.23, -1208, -304, -1488, -264, -1800, -184, -1864, -40, -1792.11, 768.127, -1776.45, 920.831, -1733.64, 992.184, -1662.29, 1004.08, -1369.74, 1025.48, -1200.88, 992.184, -1280.21, 1125.67, -1334.07, 1299, -1122, 3864.44, -972.634, 4740.03, -543.432, 4712.55, -514.946, 4964.63, -947.092, 4921, -1108.36, 4931.07, -1692.96, 4003.77, -1714.8, 1273.13, -1891.2, 1096.73, -1982.38, 663.477, -1912, -56, -1880, -184, -1208, -456, -647.696, -491.109, -29.8807, -451.024, 206.119, -425.024, 382.41, -293.101, 662.108, -178.679, 649.394, 137.041, 501.07, 408.263, 166.279, 425.215, -56.2078, 414.62, -426.489, 375.431, -1112.16, 27.4681, -955.9, 423.743, -284.42, 535.668, 200.229, 746.798, 220.387, 1044.14, 343.068, 4124.73, -19.7898, 4850.44, -231.457, 4885.72, -531.898, 4930.73, -548.849, 4731.55, -229.008, 3792.52, 113.362, 1179.06, 22.593, 965.487, -174.963, 762.591, -399.216, 690.51, -655.506, 647.795, -909.125, 677.161, -1276.98, 756.721, -1754.05, 772.884, -1680, -72, -1464, -128, -1200, -176, -706.064, -181.31, -480.79, -219.378, -386.081, 0.529053, -258.12, 135.224, -174.868, 204.847 )
+
+[node name="Col2" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( -505.307, 44.1042 )
+scale = Vector2( 0.776237, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col3" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( -238.281, 50.4539 )
+scale = Vector2( 0.755894, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col4" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( 152.371, 301.128 )
+scale = Vector2( 0.776237, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col5" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( 419.398, 307.478 )
+scale = Vector2( 0.755894, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col6" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( -483.511, 586.587 )
+scale = Vector2( 0.776237, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col7" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( -216.485, 592.936 )
+scale = Vector2( 0.755894, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col8" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( 229.3, 816.473 )
+scale = Vector2( 0.776237, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col9" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( 496.326, 822.823 )
+scale = Vector2( 0.755894, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col10" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( 36.4585, 1059.6 )
+scale = Vector2( 0.776237, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col11" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( 303.485, 1065.95 )
+scale = Vector2( 0.755894, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col12" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( -381.835, 1682 )
+scale = Vector2( 0.776237, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col13" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( -114.809, 1688.35 )
+scale = Vector2( 0.755894, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col14" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( 192.689, 1676.96 )
+scale = Vector2( 0.776237, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col15" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( 459.715, 1683.31 )
+scale = Vector2( 0.755894, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col16" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( -546.293, 1317.4 )
+scale = Vector2( 0.776237, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col17" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( -279.266, 1323.75 )
+scale = Vector2( 0.755894, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col18" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( -170.442, 2444.6 )
+scale = Vector2( 0.776237, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col19" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+position = Vector2( 96.5845, 2450.95 )
+scale = Vector2( 0.755894, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col20" type="Polygon2D" parent="terrain"]
+position = Vector2( 2.66968, -2.66968 )
+color = Color( 0.133333, 0.133333, 0.133333, 1 )
+invert_border = 0.1
+polygon = PoolVector2Array( -24.6481, 184.613, 109.068, 183.657, 228.591, 246.434, 375.425, 240.441, 435.383, 166.706, 492.293, 27.6813, 507.427, -125.706, 471.317, -200.061, 371.815, -259.198, 202.301, -301.577, -39.8807, -305.024, -526.47, -331.72, -771.167, -327.23, -1208, -304, -1488, -264, -1800, -184, -1864, -40, -1792.11, 768.127, -1776.45, 920.831, -1733.64, 992.184, -1662.29, 1004.08, -1369.74, 1025.48, -1200.88, 992.184, -1280.21, 1125.67, -1334.07, 1299, -1122, 3864.44, -972.634, 4740.03, -543.432, 4712.55, -435.313, 5488.39, -1025, 5534.94, -1995.39, 5592.02, -2756.48, 5076.12, -2349.06, 1422.01, -2365.06, 758.007, -2373.06, -33.9935, -2253.06, -411.109, -2037.06, -643.109, -1277.06, -1051.11, -381.06, -1115.11, 98.9397, -995.109, 722.94, -907.109, 1098.94, -619.109, 1458.07, -360.856, 1629.31, 580.995, 1657.86, 5392.23, 240.321, 5506.39, -187.793, 5582.5, -435.149, 5477.85, -548.849, 4731.55, -229.008, 3792.52, 113.362, 1179.06, 22.593, 965.487, -174.963, 762.591, -399.216, 690.51, -655.506, 647.795, -909.125, 677.161, -1276.98, 756.721, -1754.05, 772.884, -1680, -72, -1464, -128, -1200, -176, -706.064, -181.31, -480.79, -219.378, -386.081, 0.529053, -258.12, 135.224, -174.868, 204.847 )
+
+[node name="Col21" type="Polygon2D" parent="terrain"]
+position = Vector2( -505.307, 44.1042 )
+scale = Vector2( 0.776237, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col22" type="Polygon2D" parent="terrain"]
+position = Vector2( -238.281, 50.4539 )
+scale = Vector2( 0.755894, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col23" type="Polygon2D" parent="terrain"]
+position = Vector2( 152.371, 301.128 )
+scale = Vector2( 0.776237, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col24" type="Polygon2D" parent="terrain"]
+position = Vector2( 419.398, 307.478 )
+scale = Vector2( 0.755894, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col25" type="Polygon2D" parent="terrain"]
+position = Vector2( -483.511, 586.587 )
+scale = Vector2( 0.776237, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col26" type="Polygon2D" parent="terrain"]
+position = Vector2( -216.485, 592.936 )
+scale = Vector2( 0.755894, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col27" type="Polygon2D" parent="terrain"]
+position = Vector2( 229.3, 816.473 )
+scale = Vector2( 0.776237, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col28" type="Polygon2D" parent="terrain"]
+position = Vector2( 496.326, 822.823 )
+scale = Vector2( 0.755894, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col29" type="Polygon2D" parent="terrain"]
+position = Vector2( 36.4585, 1059.6 )
+scale = Vector2( 0.776237, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col30" type="Polygon2D" parent="terrain"]
+position = Vector2( 303.485, 1065.95 )
+scale = Vector2( 0.755894, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col31" type="Polygon2D" parent="terrain"]
+position = Vector2( -381.835, 1682 )
+scale = Vector2( 0.776237, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col32" type="Polygon2D" parent="terrain"]
+position = Vector2( -114.809, 1688.35 )
+scale = Vector2( 0.755894, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col33" type="Polygon2D" parent="terrain"]
+position = Vector2( 192.689, 1676.96 )
+scale = Vector2( 0.776237, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col34" type="Polygon2D" parent="terrain"]
+position = Vector2( 459.715, 1683.31 )
+scale = Vector2( 0.755894, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col35" type="Polygon2D" parent="terrain"]
+position = Vector2( -546.293, 1317.4 )
+scale = Vector2( 0.776237, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col36" type="Polygon2D" parent="terrain"]
+position = Vector2( -279.266, 1323.75 )
+scale = Vector2( 0.755894, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col37" type="Polygon2D" parent="terrain"]
+position = Vector2( -170.442, 2444.6 )
+scale = Vector2( 0.776237, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="Col38" type="Polygon2D" parent="terrain"]
+position = Vector2( 96.5845, 2450.95 )
+scale = Vector2( 0.755894, 1 )
+color = Color( 0.435294, 0, 0, 1 )
+polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
+
+[node name="button" parent="." instance=ExtResource( 1 )]
+position = Vector2( -920, -189.94 )
+scale = Vector2( 3.636, 1 )
+
+[node name="tripwire" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1863.78, 62.0863 )
+rotation = -1.5708
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 25.6937, 93.6291 )
+rotation = -1.62316
+collision_layer = 9
+
+[node name="gooprefiller" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1517.62, 981.115 )
+
+[node name="tripwire2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1120.07, 1365.69 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -462.39, 1622.71 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1098.27, 1908.17 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire5" parent="." instance=ExtResource( 2 )]
+position = Vector2( -385.462, 2138.06 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire6" parent="." instance=ExtResource( 2 )]
+position = Vector2( -578.303, 2381.18 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire7" parent="." instance=ExtResource( 2 )]
+position = Vector2( -996.596, 3003.58 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire8" parent="." instance=ExtResource( 2 )]
+position = Vector2( -422.072, 2998.54 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire9" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1161.05, 2638.98 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire10" parent="." instance=ExtResource( 2 )]
+position = Vector2( -785.203, 3766.18 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false

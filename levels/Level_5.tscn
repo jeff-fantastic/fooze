@@ -13,7 +13,7 @@ LEVEL_ID = 5
 LEVEL_NAME = "Mind the Gap"
 
 [node name="button" parent="." instance=ExtResource( 5 )]
-position = Vector2( 816.257, -501.333 )
+position = Vector2( 808.23, -504.901 )
 rotation = 0.0872665
 scale = Vector2( 4, 4 )
 
