@@ -21,23 +21,31 @@ position = Vector2( 12.5, -272 )
 [node name="button" parent="." instance=ExtResource( 5 )]
 position = Vector2( -1032, 168 )
 scale = Vector2( 2.77995, 2.71721 )
+collision_layer = 8
+collision_mask = 8
 FOREVER = true
 
 [node name="button2" parent="." instance=ExtResource( 5 )]
 position = Vector2( -464, -480 )
 scale = Vector2( 3.33314, 3.35621 )
+collision_layer = 8
+collision_mask = 8
 SENDER_ID = 1
 FOREVER = true
 
 [node name="button3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 816, -320 )
 scale = Vector2( 3.33314, 3.35621 )
+collision_layer = 8
+collision_mask = 8
 SENDER_ID = 2
 FOREVER = true
 
 [node name="button4" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1320, 344 )
 scale = Vector2( 3.33314, 3.35621 )
+collision_layer = 8
+collision_mask = 8
 SENDER_ID = 3
 FOREVER = true
 
