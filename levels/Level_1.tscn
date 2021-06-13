@@ -6,7 +6,7 @@
 [ext_resource path="res://prefabs/exitdoor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://prefabs/Button.tscn" type="PackedScene" id=5]
 
-[node name="level1" type="Node2D"]
+[node name="level_1" type="Node2D"]
 script = ExtResource( 1 )
 LEVEL_NAME = "The Big Break"
 

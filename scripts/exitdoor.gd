@@ -16,7 +16,7 @@ func _on_exitdoor_body_entered(body):
 		DOOR_ENABLED = true
 		yield(get_tree().create_timer(2.45), "timeout")
 		$pop.visible = true
-		$pop.play("suck")
+		$pop.play("default")
 		yield(get_tree().create_timer(0.5), "timeout")
 		$vis.animation = "close"
 		$door_close.play()

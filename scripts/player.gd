@@ -30,6 +30,8 @@ func _physics_process(_delta):
 		$vis.scale = Vector2(clamp(lerp($vis.scale.x, GOO_AMOUNT / 50, 0.05), 0.2, 2), clamp(lerp($vis.scale.y, GOO_AMOUNT / 50, 0.05), 0.2, 2))
 		mass = clamp(GOO_AMOUNT / 50, 1, 1.5)
 		move()
+	if PLAYER_STATE == STATES.DISABLED:
+		mode = RigidBody2D.MODE_STATIC
 	if PLAYER_STATE == STATES.SUCK_INIT:
 		$tween.interpolate_property($vis, "scale", $vis.scale, Vector2(0,0), 2.45, Tween.TRANS_LINEAR, Tween.EASE_IN)
 		$tween.start()
