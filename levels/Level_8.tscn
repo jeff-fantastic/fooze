@@ -22,6 +22,7 @@ IS_RECIEVER = false
 
 [node name="exitdoor" parent="." instance=ExtResource( 5 )]
 position = Vector2( -800, -808 )
+WARP_PATH = "res://levels/Level_9.tscn"
 
 [node name="player" parent="." instance=ExtResource( 4 )]
 position = Vector2( -357.339, -212.151 )
