@@ -254,7 +254,7 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="Environment" id=64]
+[sub_resource type="Environment" id=62]
 background_mode = 1
 ambient_light_color = Color( 1, 1, 1, 0 )
 fog_enabled = true
@@ -264,7 +264,7 @@ fog_depth_begin = 1.0
 fog_depth_end = 3.0
 glow_enabled = true
 
-[sub_resource type="Animation" id=65]
+[sub_resource type="Animation" id=63]
 resource_name = "Title"
 length = 4.0
 loop = true
@@ -293,11 +293,11 @@ tracks/1/keys = {
 "values": [ Vector3( 3.75, 3, 2 ) ]
 }
 
-[sub_resource type="DynamicFont" id=66]
+[sub_resource type="DynamicFont" id=64]
 size = 20
 font_data = ExtResource( 3 )
 
-[sub_resource type="StyleBoxFlat" id=62]
+[sub_resource type="StyleBoxFlat" id=65]
 bg_color = Color( 1, 0, 0, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -305,7 +305,7 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="DynamicFont" id=63]
+[sub_resource type="DynamicFont" id=66]
 size = 20
 font_data = ExtResource( 3 )
 
@@ -315,11 +315,11 @@ script = ExtResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 180, 70 )
 frames = SubResource( 61 )
-frame = 54
+frame = 22
 playing = true
 
 [node name="Camera" type="Camera" parent="."]
-environment = SubResource( 64 )
+environment = SubResource( 62 )
 fov = 32.3
 near = 0.01
 far = 111.6
@@ -332,14 +332,14 @@ material/0 = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 0.5
-anims/Title = SubResource( 65 )
+anims/Title = SubResource( 63 )
 
 [node name="Info" type="RichTextLabel" parent="."]
 margin_left = 55.0653
 margin_top = 216.476
 margin_right = 305.065
 margin_bottom = 235.476
-custom_fonts/normal_font = SubResource( 66 )
+custom_fonts/normal_font = SubResource( 64 )
 text = "Game by Jefftastic & Coffee Bat - 2021"
 scroll_active = false
 __meta__ = {
@@ -363,9 +363,9 @@ margin_left = 136.0
 margin_top = 133.0
 margin_right = 184.0
 margin_bottom = 157.0
-custom_styles/hover = SubResource( 62 )
+custom_styles/hover = SubResource( 65 )
 custom_styles/normal = ExtResource( 4 )
-custom_fonts/font = SubResource( 63 )
+custom_fonts/font = SubResource( 66 )
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -380,9 +380,9 @@ margin_left = 124.0
 margin_top = 161.0
 margin_right = 196.0
 margin_bottom = 185.0
-custom_styles/hover = SubResource( 62 )
+custom_styles/hover = SubResource( 65 )
 custom_styles/normal = ExtResource( 4 )
-custom_fonts/font = SubResource( 63 )
+custom_fonts/font = SubResource( 66 )
 text = "Options"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -401,9 +401,9 @@ margin_left = 68.0
 margin_top = 133.0
 margin_right = 164.0
 margin_bottom = 174.0
-custom_styles/hover = SubResource( 62 )
+custom_styles/hover = SubResource( 65 )
 custom_styles/normal = ExtResource( 4 )
-custom_fonts/font = SubResource( 63 )
+custom_fonts/font = SubResource( 66 )
 text = "Change scale"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -414,9 +414,9 @@ margin_left = 68.0
 margin_top = 177.0
 margin_right = 164.0
 margin_bottom = 201.0
-custom_styles/hover = SubResource( 62 )
+custom_styles/hover = SubResource( 65 )
 custom_styles/normal = ExtResource( 4 )
-custom_fonts/font = SubResource( 63 )
+custom_fonts/font = SubResource( 66 )
 text = "Back"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -459,7 +459,7 @@ margin_left = 179.0
 margin_top = 133.0
 margin_right = 291.0
 margin_bottom = 152.0
-custom_fonts/normal_font = SubResource( 66 )
+custom_fonts/normal_font = SubResource( 64 )
 text = "Music Volume"
 scroll_active = false
 __meta__ = {
@@ -471,7 +471,7 @@ margin_left = 179.0
 margin_top = 168.0
 margin_right = 291.0
 margin_bottom = 187.0
-custom_fonts/normal_font = SubResource( 66 )
+custom_fonts/normal_font = SubResource( 64 )
 text = "Sound FX Volume"
 scroll_active = false
 __meta__ = {

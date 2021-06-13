@@ -1,7 +1,6 @@
 extends RayCast2D
 
 export (int) var RECIEVER_ID = 0
-export (String) var RESTART_TARGET
 export (bool) var ENABLED = true
 export (bool) var IS_RECIEVER = true
 var BUTTON
@@ -43,4 +42,4 @@ func update():
 		if get_collider() is RigidBody2D:
 			var player = get_collider()
 			player.PLAYER_STATE = player.STATES.DISABLED
-			Transit.change_scene(RESTART_TARGET, 0.5)
+			Transit.change_scene(get_tree().current_scene.filename, 0.5)
