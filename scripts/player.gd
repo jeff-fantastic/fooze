@@ -26,8 +26,8 @@ func _physics_process(_delta):
 			if !children[i].playing:
 				children[i].queue_free()
 	if PLAYER_STATE == STATES.ENABLED:
-		$col.scale = Vector2(clamp(lerp($col.scale.x, GOO_AMOUNT / 50, 0.05), 0.2, 2), clamp(lerp($col.scale.y, GOO_AMOUNT / 50, 0.05), 0.2, 2))
-		$vis.scale = Vector2(clamp(lerp($vis.scale.x, GOO_AMOUNT / 50, 0.05), 0.2, 2), clamp(lerp($vis.scale.y, GOO_AMOUNT / 50, 0.05), 0.2, 2))
+		$col.scale = Vector2(clamp(lerp($col.scale.x, GOO_AMOUNT / 50, 0.05), 0.2, 1.5), clamp(lerp($col.scale.y, GOO_AMOUNT / 50, 0.05), 0.2, 1.5))
+		$vis.scale = Vector2(clamp(lerp($vis.scale.x, GOO_AMOUNT / 50, 0.05), 0.2, 1.5), clamp(lerp($vis.scale.y, GOO_AMOUNT / 50, 0.05), 0.2, 1.5))
 		mass = clamp(GOO_AMOUNT / 50, 1, 1.5)
 		move()
 	if PLAYER_STATE == STATES.DISABLED:

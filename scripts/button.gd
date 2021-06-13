@@ -1,6 +1,7 @@
 extends Area2D
 
 export (int) var SENDER_ID = 0
+export (bool) var FOREVER = false
 signal button_enabled
 signal button_disabled
 var ON = false
@@ -18,7 +19,7 @@ func _on_button_body_entered(body):
 		emit_signal("button_enabled", SENDER_ID)
 
 func _on_button_body_exited(body):
-	if body in KinematicBody2D or RigidBody2D:
+	if body in KinematicBody2D or RigidBody2D and !FOREVER:
 		if get_overlapping_bodies() == []:
 			ON = false
 			emit_signal("button_disabled", SENDER_ID)
