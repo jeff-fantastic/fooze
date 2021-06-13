@@ -17,6 +17,7 @@ position = Vector2( 0, 96 )
 
 [node name="exitdoor" parent="." instance=ExtResource( 3 )]
 position = Vector2( 12.5, -272 )
+WARP_PATH = "res://levels/Level_10.tscn"
 
 [node name="button" parent="." instance=ExtResource( 5 )]
 position = Vector2( -1032, 168 )

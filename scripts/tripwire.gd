@@ -18,19 +18,16 @@ func _ready():
 		BUTTON.connect("button_disabled", self, "wire_enabled")
 
 func wire_enabled(SENDER_ID):
-	print("recieved")
 	if SENDER_ID == RECIEVER_ID:
 		ENABLED = true
-		print("enabled")
 		
 func wire_disabled(SENDER_ID):
-	print("recieved")
 	if SENDER_ID == RECIEVER_ID:
 		ENABLED = false
-		print("disabled")
 
 func _physics_process(_delta):
 	if ENABLED:
+		visible = true
 		update()
 	else:
 		visible = false

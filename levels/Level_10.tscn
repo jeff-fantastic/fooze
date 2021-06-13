@@ -16,6 +16,77 @@ LEVEL_NAME = "A way out"
 position = Vector2( -737.287, 4688.43 )
 WARP_PATH = "res://levels/Endscreen.tscn"
 
+[node name="tripwire" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1863.78, 62.0863 )
+rotation = -1.5708
+
+[node name="tripwire2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1120.07, 1365.69 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -462.39, 1622.71 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1098.27, 1908.17 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire5" parent="." instance=ExtResource( 2 )]
+position = Vector2( -385.462, 2138.06 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire6" parent="." instance=ExtResource( 2 )]
+position = Vector2( -578.303, 2381.18 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire7" parent="." instance=ExtResource( 2 )]
+position = Vector2( -996.596, 3003.58 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire8" parent="." instance=ExtResource( 2 )]
+position = Vector2( -422.072, 2998.54 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire9" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1161.05, 2638.98 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="tripwire10" parent="." instance=ExtResource( 2 )]
+position = Vector2( -785.203, 3766.18 )
+rotation = -1.5708
+scale = Vector2( 1, 0.776237 )
+IS_RECIEVER = false
+
+[node name="button" parent="." instance=ExtResource( 1 )]
+position = Vector2( -920, -189.94 )
+scale = Vector2( 3.636, 1 )
+FOREVER = true
+
+[node name="gooprefiller" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1517.62, 981.115 )
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 25.6937, 93.6291 )
+rotation = -1.62316
+collision_layer = 9
+
 [node name="terrain" type="StaticBody2D" parent="."]
 
 [node name="Col" type="CollisionPolygon2D" parent="terrain"]
@@ -244,73 +315,3 @@ position = Vector2( 96.5845, 2450.95 )
 scale = Vector2( 0.755894, 1 )
 color = Color( 0.435294, 0, 0, 1 )
 polygon = PoolVector2Array( -890.279, 1289.41, -886.916, 1349.95, -792.735, 1349.95, -792.735, 1296.13 )
-
-[node name="button" parent="." instance=ExtResource( 1 )]
-position = Vector2( -920, -189.94 )
-scale = Vector2( 3.636, 1 )
-
-[node name="tripwire" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1863.78, 62.0863 )
-rotation = -1.5708
-
-[node name="player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 25.6937, 93.6291 )
-rotation = -1.62316
-collision_layer = 9
-
-[node name="gooprefiller" parent="." instance=ExtResource( 6 )]
-position = Vector2( -1517.62, 981.115 )
-
-[node name="tripwire2" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1120.07, 1365.69 )
-rotation = -1.5708
-scale = Vector2( 1, 0.776237 )
-IS_RECIEVER = false
-
-[node name="tripwire3" parent="." instance=ExtResource( 2 )]
-position = Vector2( -462.39, 1622.71 )
-rotation = -1.5708
-scale = Vector2( 1, 0.776237 )
-IS_RECIEVER = false
-
-[node name="tripwire4" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1098.27, 1908.17 )
-rotation = -1.5708
-scale = Vector2( 1, 0.776237 )
-IS_RECIEVER = false
-
-[node name="tripwire5" parent="." instance=ExtResource( 2 )]
-position = Vector2( -385.462, 2138.06 )
-rotation = -1.5708
-scale = Vector2( 1, 0.776237 )
-IS_RECIEVER = false
-
-[node name="tripwire6" parent="." instance=ExtResource( 2 )]
-position = Vector2( -578.303, 2381.18 )
-rotation = -1.5708
-scale = Vector2( 1, 0.776237 )
-IS_RECIEVER = false
-
-[node name="tripwire7" parent="." instance=ExtResource( 2 )]
-position = Vector2( -996.596, 3003.58 )
-rotation = -1.5708
-scale = Vector2( 1, 0.776237 )
-IS_RECIEVER = false
-
-[node name="tripwire8" parent="." instance=ExtResource( 2 )]
-position = Vector2( -422.072, 2998.54 )
-rotation = -1.5708
-scale = Vector2( 1, 0.776237 )
-IS_RECIEVER = false
-
-[node name="tripwire9" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1161.05, 2638.98 )
-rotation = -1.5708
-scale = Vector2( 1, 0.776237 )
-IS_RECIEVER = false
-
-[node name="tripwire10" parent="." instance=ExtResource( 2 )]
-position = Vector2( -785.203, 3766.18 )
-rotation = -1.5708
-scale = Vector2( 1, 0.776237 )
-IS_RECIEVER = false

@@ -16,16 +16,12 @@ func _ready():
 	BUTTON.connect("button_disabled", self, "door_disabled")
 	
 func door_enabled(SENDER_ID):
-	print("recieved")
 	if SENDER_ID == RECIEVER_ID:
 		ENABLED = true
-		print("enabled")
 		
 func door_disabled(SENDER_ID):
-	print("recieved")
 	if SENDER_ID == RECIEVER_ID:
 		ENABLED = false
-		print("disabled")
 
 func _process(_delta):
 	if ENABLED:
