@@ -11,7 +11,7 @@ LEVEL_NAME = "Tight Fit"
 
 [node name="exitdoor" parent="." instance=ExtResource( 4 )]
 position = Vector2( 792, 16 )
-WARP_PATH = "res://testing.tscn"
+WARP_PATH = "res://levels/Level_3.tscn"
 
 [node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( -608, -88 )

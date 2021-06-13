@@ -1,66 +1,49 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/level_init.gd" type="Script" id=1]
 [ext_resource path="res://prefabs/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://prefabs/exitdoor.tscn" type="PackedScene" id=3]
-[ext_resource path="res://prefabs/tripwire.tscn" type="PackedScene" id=4]
-[ext_resource path="res://prefabs/button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://prefabs/door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/Button.tscn" type="PackedScene" id=4]
+[ext_resource path="res://prefabs/ExitDoor.tscn" type="PackedScene" id=5]
 
-[node name="Level_4" type="Node2D"]
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.3
+bounce = 0.2
+
+[node name="level_3" type="Node2D"]
 script = ExtResource( 1 )
-LEVEL_ID = 4
-LEVEL_NAME = "Access Point"
+LEVEL_ID = 3
+LEVEL_NAME = "The Hoola Hoop"
 
-[node name="tripwire" parent="." instance=ExtResource( 4 )]
-position = Vector2( -152, -360 )
-collision_mask = 9
-RECIEVER_ID = 1
-RESTART_TARGET = "res://levels/Level_3.tscn"
-IS_RECIEVER = false
-
-[node name="tripwire2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 259.675, -285.439 )
-rotation = -1.309
-collision_mask = 9
-RESTART_TARGET = "res://levels/Level_3.tscn"
-
-[node name="tripwire3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 456, -304 )
-rotation = 1.83259
-collision_mask = 9
-RESTART_TARGET = "res://levels/Level_3.tscn"
-
-[node name="button" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1023.96, -64.3678 )
-scale = Vector2( 8.06573, 3.22709 )
-collision_layer = 14
-collision_mask = 14
-
-[node name="exitdoor" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1096, -432 )
-WARP_PATH = "res://testing.tscn"
+[node name="exitdoor" parent="." instance=ExtResource( 5 )]
+position = Vector2( 792, 16 )
+WARP_PATH = "res://levels/Level_4.tscn"
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1112, -528 )
-collision_layer = 8
+position = Vector2( -646.136, 145.548 )
+physics_material_override = SubResource( 1 )
+
+[node name="door" parent="." instance=ExtResource( 3 )]
+position = Vector2( 105.409, 220.168 )
 
 [node name="terrain" type="StaticBody2D" parent="."]
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="vis" type="Polygon2D" parent="terrain"]
 color = Color( 0.133333, 0.133333, 0.133333, 1 )
 invert_enable = true
 invert_border = 1754.9
-polygon = PoolVector2Array( -1112, -480, -856, -512, -888, -360, -752, -128, -360, -40, -200, -112, -104, -112, 256, -56, 448, -72, 544, -32, 608, -80, 736, -32, 928, -96, 984, -48, 1056, -48, 1112, -88, 1104, -184, 1016, -216, 944, -224, 808, -240, 728, -112, 640, -168, 456, -176, 456, -344, 712, -400, 1208, -416, 1296, -488, 1304, -640, 840, -808, 728, -744, 680, -632, 648, -672, 592, -664, 528, -544, 488, -632, 376, -656, 272, -536, 256, -224, 72, -304, 24, -488, -128, -544, -248, -512, -368, -384, -568, -328, -656, -488, -608, -624, -696, -808, -784, -808, -856, -728, -920, -824, -1096, -848, -1144, -832, -1176, -760, -1224, -792, -1232, -704, -1312, -768, -1352, -584, -1272, -512 )
+polygon = PoolVector2Array( -864, 72, -792, 200, -680, 240, -488, 232, -352, 200, -264, 144, -192, 8, -119.132, 173.605, -79.0864, 218.989, 64, 280, 144, 280, 280, 232, 426.422, 140.269, 553.701, 55.4167, 616, 32, 720, 32, 800, 40, 896, 0, 936, -112, 896, -184, 872, -192, 864, -168, 848, -200, 816, -208, 800, -232, 776, -208, 776, -232, 736, -256, 664, -224, 640, -136, 608, -128, 592, -104, 576, -120, 528, -80, 504, -48, 488, -64, 440, -80, 383.996, 11.5759, 144, 216, 64, 216, -19.0552, 155.826, -166.133, -463.6, -280.685, -559.766, -402.307, -480.57, -376.851, -381.576, -320, -328, -232, -208, -256, -192, -288, -208, -344, -288, -420.692, -367.433, -648, -392, -768, -320, -832, -208, -872, -96 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="col" type="CollisionPolygon2D" parent="terrain"]
 visible = false
-polygon = PoolVector2Array( -752, -128, -360, -40, -200, -112, -104, -112, 256, -56, 448, -72, 544, -32, 608, -80, 736, -32, 928, -96, 984, -48, 1056, -48, 1112, -88, 1104, -184, 1016, -216, 808, -240, 728, -112, 640, -168, 456, -176, 456, -344, 712, -400, 1208, -416, 1296, -488, 1304, -640, 840, -808, 728, -744, 680, -632, 648, -672, 592, -664, 528, -544, 488, -632, 376, -656, 272, -536, 256, -224, 72, -304, 24, -488, -128, -544, -248, -512, -368, -384, -568, -328, -656, -488, -608, -624, -696, -808, -784, -808, -856, -728, -920, -824, -1096, -848, -1144, -832, -1176, -760, -1224, -792, -1232, -704, -1312, -768, -1352, -584, -2272, -488, -2296, -1688, 2096, -1648, 2144, 968, -2304, 936, -2296, -104, -2272, -488, -1352, -584, -1272, -512, -1112, -480, -856, -512, -888, -360 )
+polygon = PoolVector2Array( -1312, -792, -1312, 640, 1696, 632, 1680, -824, 736, -256, 776, -232, 776, -208, 800, -232, 816, -208, 848, -200, 864, -168, 872, -192, 896, -184, 936, -112, 896, 0, 800, 40, 712, 32, 616, 32, 552, 56, 528.767, 72.7068, 448, 128, 280, 240, 144, 280, 64, 280, -72, 224, -120.541, 174.979, -192, 0, -264, 144, -352, 200, -488, 232, -680, 240, -792, 200, -864, 72, -872, -96, -832, -208, -768, -320, -648, -392, -424, -368, -344, -288, -288, -208, -256, -192, -232, -208, -320, -328, -376, -384, -400.983, -480.021, -280, -560, -168, -464, -16, 152, 64, 216, 144, 216, 384, 8, 440, -80, 488, -64, 504, -48, 533.523, -84.2685, 576, -120, 592, -104, 608, -128, 640, -136, 664, -224, 736, -256, -289.26, -652.554 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="button" parent="." instance=ExtResource( 4 )]
+position = Vector2( -340.236, -366.922 )
+rotation = 0.785398

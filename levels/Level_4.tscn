@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/level_init.gd" type="Script" id=1]
+[ext_resource path="res://prefabs/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/exitdoor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/tripwire.tscn" type="PackedScene" id=4]
+[ext_resource path="res://prefabs/button.tscn" type="PackedScene" id=5]
+
+[node name="Level_4" type="Node2D"]
+script = ExtResource( 1 )
+LEVEL_ID = 4
+LEVEL_NAME = "Access Point"
+
+[node name="tripwire" parent="." instance=ExtResource( 4 )]
+position = Vector2( -152, -360 )
+collision_mask = 9
+RECIEVER_ID = 1
+RESTART_TARGET = "res://levels/Level_3.tscn"
+IS_RECIEVER = false
+
+[node name="tripwire2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 259.675, -285.439 )
+rotation = -1.309
+collision_mask = 9
+RESTART_TARGET = "res://levels/Level_3.tscn"
+
+[node name="tripwire3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 456, -304 )
+rotation = 1.83259
+collision_mask = 9
+RESTART_TARGET = "res://levels/Level_3.tscn"
+
+[node name="button" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1023.96, -64.3678 )
+scale = Vector2( 8.06573, 3.22709 )
+
+[node name="exitdoor" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1096, -432 )
+WARP_PATH = "res://testing.tscn"
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1112, -528 )
+collision_layer = 8
+
+[node name="terrain" type="StaticBody2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="vis" type="Polygon2D" parent="terrain"]
+color = Color( 0.133333, 0.133333, 0.133333, 1 )
+invert_enable = true
+invert_border = 1754.9
+polygon = PoolVector2Array( -1112, -480, -856, -512, -888, -360, -752, -128, -360, -40, -200, -112, -104, -112, 256, -56, 448, -72, 544, -32, 608, -80, 736, -32, 928, -96, 984, -48, 1056, -48, 1112, -88, 1104, -184, 1016, -216, 944, -224, 808, -240, 728, -112, 640, -168, 456, -176, 456, -344, 712, -400, 1208, -416, 1296, -488, 1304, -640, 840, -808, 728, -744, 680, -632, 648, -672, 592, -664, 528, -544, 488, -632, 376, -656, 272, -536, 256, -224, 72, -304, 24, -488, -128, -544, -248, -512, -368, -384, -568, -328, -656, -488, -608, -624, -696, -808, -784, -808, -856, -728, -920, -824, -1096, -848, -1144, -832, -1176, -760, -1224, -792, -1232, -704, -1312, -768, -1352, -584, -1272, -512 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="col" type="CollisionPolygon2D" parent="terrain"]
+visible = false
+polygon = PoolVector2Array( -752, -128, -360, -40, -200, -112, -104, -112, 256, -56, 448, -72, 544, -32, 608, -80, 736, -32, 928, -96, 984, -48, 1056, -48, 1112, -88, 1104, -184, 1016, -216, 808, -240, 728, -112, 640, -168, 456, -176, 456, -344, 712, -400, 1208, -416, 1296, -488, 1304, -640, 840, -808, 728, -744, 680, -632, 648, -672, 592, -664, 528, -544, 488, -632, 376, -656, 272, -536, 256, -224, 72, -304, 24, -488, -128, -544, -248, -512, -368, -384, -568, -328, -656, -488, -608, -624, -696, -808, -784, -808, -856, -728, -920, -824, -1096, -848, -1144, -832, -1176, -760, -1224, -792, -1232, -704, -1312, -768, -1352, -584, -2272, -488, -2296, -1688, 2096, -1648, 2144, 968, -2304, 936, -2296, -104, -2272, -488, -1352, -584, -1272, -512, -1112, -480, -856, -512, -888, -360 )
+__meta__ = {
+"_edit_lock_": true
+}
