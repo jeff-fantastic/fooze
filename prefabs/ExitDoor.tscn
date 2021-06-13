@@ -155,14 +155,17 @@ shape = SubResource( 26 )
 [node name="door_open" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 volume_db = -5.0
+bus = "Sound"
 
 [node name="door_close" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
 volume_db = -5.0
+bus = "Sound"
 
 [node name="door_suck" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
 volume_db = -5.0
+bus = "Sound"
 
 [connection signal="body_entered" from="." to="." method="_on_exitdoor_body_entered"]
 [connection signal="body_entered" from="col/radius" to="." method="_on_radius_body_entered"]

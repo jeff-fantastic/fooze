@@ -2,11 +2,13 @@ extends Area2D
 
 export (String) var WARP_PATH
 var DOOR_ENABLED = false
+var DOOR_IN_RADIUS = false
 
 func _on_radius_body_entered(body):
-	if body.get_name() == 'player':
+	if body.get_name() == 'player' and !DOOR_IN_RADIUS:
 		$vis.animation = "open"
 		$door_open.play()
+		DOOR_IN_RADIUS = true
 	
 func _on_exitdoor_body_entered(body):
 	if body.get_name() == 'player' and !DOOR_ENABLED:

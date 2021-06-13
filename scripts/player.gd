@@ -64,6 +64,7 @@ func _on_detector_body_entered(body):
 	if body.is_in_group("mass"):
 		if body.ENABLED:
 			var slurp = AudioStreamPlayer2D.new()
+			slurp.bus = "Sound"
 			slurp.stream = load("res://sfx/slurp.wav")
 			slurp.pitch_scale = rand_range(0.7, 1.2)
 			slurp.volume_db = rand_range(-15, -5)

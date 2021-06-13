@@ -5,6 +5,12 @@ var IsFullscreen = true
 var save_path = "res://config/conf.cfg"
 var config = ConfigFile.new()
 var load_response = config.load(save_path)
+var SFX_volume = 80
+var MUS_volume = 70
+
+func change_volume():
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), MUS_volume - 100)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Sound"), SFX_volume - 100)
 
 func change_scale():
 	var real_width = ProjectSettings.get_setting("display/window/size/width")
@@ -33,22 +39,25 @@ func play_song(dir):
 	$Music.stream = sfx
 	$Music.play()
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	loadConfig()
 	change_scale()
+	change_volume()
 
 func saveConfig():
 	config.set_value("Misc","Scale", Scale)
 	config.set_value("Misc","Fullscreen", IsFullscreen)
+	config.set_value("Misc","SFX_Volume", SFX_volume)
+	config.set_value("Misc","MUS_Volume", MUS_volume)
 	config.save(save_path)
 
 func loadConfig():
 	Scale = config.get_value("Misc","Scale", Scale)
 	IsFullscreen = config.get_value("Misc","Fullscreen", IsFullscreen)
+	SFX_volume = config.get_value("Misc","SFX_Volume", SFX_volume)
+	MUS_volume = config.get_value("Misc","MUS_Volume", MUS_volume)
 	
-
 func _process(delta):
 	if Input.is_action_just_pressed("ui_fullscreen"):
 		OS.window_fullscreen = not OS.window_fullscreen
