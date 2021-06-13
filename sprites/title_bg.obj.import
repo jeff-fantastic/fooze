@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/title_bg.obj-ad2967a63987ed0e0f7e60b16cbdbff5.mesh"
+
+[deps]
+
+files=[ "res://.import/title_bg.obj-ad2967a63987ed0e0f7e60b16cbdbff5.mesh" ]
+
+source_file="res://sprites/title_bg.obj"
+dest_files=[ "res://.import/title_bg.obj-ad2967a63987ed0e0f7e60b16cbdbff5.mesh", "res://.import/title_bg.obj-ad2967a63987ed0e0f7e60b16cbdbff5.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
