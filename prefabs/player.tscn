@@ -33,6 +33,7 @@ scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 2 )
 
 [node name="hair" type="Sprite" parent="vis"]
+visible = false
 position = Vector2( -0.0879364, -39.8488 )
 rotation = 0.261799
 scale = Vector2( 2.5, 2.5 )

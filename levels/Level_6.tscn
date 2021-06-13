@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/level_init.gd" type="Script" id=1]
+[ext_resource path="res://prefabs/ExitDoor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://prefabs/tripwire.tscn" type="PackedScene" id=3]
 [ext_resource path="res://prefabs/player.tscn" type="PackedScene" id=4]
 
@@ -8,6 +9,19 @@
 script = ExtResource( 1 )
 LEVEL_ID = 6
 LEVEL_NAME = "Sharpshooting"
+
+[node name="tripwire" parent="." instance=ExtResource( 3 )]
+position = Vector2( -280.702, -536 )
+rotation = 1.57079
+IS_RECIEVER = false
+
+[node name="tripwire2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -225.684, -752.982 )
+rotation = 1.57079
+IS_RECIEVER = false
+
+[node name="exitdoor" parent="." instance=ExtResource( 2 )]
+position = Vector2( -800, -808 )
 
 [node name="player" parent="." instance=ExtResource( 4 )]
 position = Vector2( -357.339, -212.151 )
@@ -65,15 +79,3 @@ polygon = PoolVector2Array( -179.2, -627.2, -179.2, -582.4, -147.2, -563.2, -102
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="tripwire" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280.702, -536 )
-rotation = 1.57079
-RESTART_TARGET = "res://levels/Level_6.tscn"
-IS_RECIEVER = false
-
-[node name="tripwire2" parent="." instance=ExtResource( 3 )]
-position = Vector2( -225.684, -752.982 )
-rotation = 1.57079
-RESTART_TARGET = "res://levels/Level_6.tscn"
-IS_RECIEVER = false
