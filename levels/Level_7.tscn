@@ -1,0 +1,113 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/level_init.gd" type="Script" id=1]
+[ext_resource path="res://prefabs/Button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/tripwire.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://prefabs/ExitDoor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://prefabs/door.tscn" type="PackedScene" id=6]
+
+[node name="Level_6" type="Node2D"]
+script = ExtResource( 1 )
+LEVEL_ID = 7
+LEVEL_NAME = "Mass hoarder"
+
+[node name="player" parent="." instance=ExtResource( 4 )]
+position = Vector2( -357.339, -212.151 )
+collision_layer = 8
+GOO_AMOUNT = 150.0
+
+[node name="terrain" type="StaticBody2D" parent="."]
+scale = Vector2( 1.25, 1.25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="vis2" type="Polygon2D" parent="terrain"]
+position = Vector2( -290.789, 8.55264 )
+color = Color( 0.133333, 0.133333, 0.133333, 1 )
+invert_border = 1754.9
+polygon = PoolVector2Array( 1100.02, -287.518, 654.625, -317.151, 654.625, -416.825, 732.748, -389.886, 1020.37, -370.606, 1095.88, -509.649, 1109, -368.335 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="vis3" type="Polygon2D" parent="terrain"]
+color = Color( 0.133333, 0.133333, 0.133333, 1 )
+invert_border = 1754.9
+polygon = PoolVector2Array( 852.433, -458.833, 362.082, -515.851, 279.407, -487.342, 210.986, -427.474, 171.074, -438.877, 14.2754, -510.149, -68.4036, -556.434, -205.049, -479.721, -334.503, -302.321, -454.367, -115.332, -471.149, -31.427, 214.482, -20.9447, 139.896, 104.496, 99.2124, 375.718, 51.8619, 898.716, -826.208, 1007.05, -1202.52, 699.155, -1413.49, 539.506, -1362.17, -1410.49, 1136.79, -1427.6, 1929.33, -1496.02, 3554.33, -1307.86, 3782.4, -355.669, 3788.1, 664.944, 2161.51, 944.33, 2072.6, -189.335, 2313.43, -192.026, 2313.43, -459.767, 2100.85, -551.256, 1763.15, -611.801, 1194.03, -549.911 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terrain"]
+position = Vector2( 96.6527, 27.1836 )
+polygon = PoolVector2Array( -567.867, -55.3674, 102.662, -55.3674, 27.1518, 86.5913, 27.1518, 213.448, -18.1542, 364.468, -148.031, 397.692, -462.153, 403.733, -585.989, 258.754, -661.499, 116.795, -664.519, -722.875, -582.968, -754.059, 63.3966, -763.12, 613.109, -717.815, 1253.43, -693.651, 1797.25, -969.892, 2272.94, -901.393, 2486.62, 620.222, 2118.13, 768.221, 1976.11, -216.41, 2219.66, -216.41, 2215.85, -486.598, 2006.55, -574.124, 1667.87, -638.816, 1091.19, -572.835, 1024.74, -482.224, 764.99, -512.427, 629.072, -554.713, 513.456, -548.736, 271.131, -562.99, 114.333, -457.508, -163.133, -581.897, -289.99, -521.489, -437.989, -307.04, -555.785, -134.878 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="terrain"]
+position = Vector2( -287.589, -37.2948 )
+scale = Vector2( 0.8, 0.8 )
+polygon = PoolVector2Array( 890.892, -423.928, 1269.96, -401.453, 1364.36, -587.243, 1370.08, -291.765, 810.079, -327.765, 814.079, -451.765 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tripwire" parent="." instance=ExtResource( 3 )]
+position = Vector2( 150.951, 318.847 )
+rotation = -1.5708
+scale = Vector2( 1, 2.538 )
+IS_RECIEVER = false
+
+[node name="button" parent="." instance=ExtResource( 2 )]
+position = Vector2( 816.257, -501.333 )
+rotation = 0.0872665
+scale = Vector2( 4, 4 )
+
+[node name="no_player" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="vis" type="Polygon2D" parent="no_player"]
+position = Vector2( -352.796, 28.5088 )
+color = Color( 1, 0, 0, 0.286275 )
+invert_border = 1754.9
+polygon = PoolVector2Array( 776.059, -484.321, 821.314, -682.311, 959.906, -724.738, 992.489, -691.695, 934.121, -466.08 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="vis2" type="Polygon2D" parent="no_player"]
+position = Vector2( 82.7192, 74.5298 )
+color = Color( 1, 0, 0, 0.286275 )
+invert_border = 1754.9
+polygon = PoolVector2Array( 776.059, -484.321, 821.314, -682.311, 959.906, -724.738, 992.489, -691.695, 934.121, -466.08 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="col" type="CollisionPolygon2D" parent="no_player"]
+position = Vector2( -356.36, 24.9451 )
+polygon = PoolVector2Array( 775.537, -482.887, 832.105, -697.847, 973.526, -714.818, 993.611, -690.572, 1002.59, -675.98, 956.569, -485.162, 926.263, -463.835 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="col2" type="CollisionPolygon2D" parent="no_player"]
+position = Vector2( 79.1556, 61.9864 )
+polygon = PoolVector2Array( 775.537, -482.887, 832.105, -697.847, 973.526, -714.818, 993.611, -690.572, 1002.59, -675.98, 956.569, -485.162, 926.263, -463.835 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="exitdoor" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2772.43, -264.727 )
+
+[node name="door" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2616.42, -460.381 )
+scale = Vector2( 4, 4 )
