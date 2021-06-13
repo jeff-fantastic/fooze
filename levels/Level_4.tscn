@@ -2,9 +2,9 @@
 
 [ext_resource path="res://scripts/level_init.gd" type="Script" id=1]
 [ext_resource path="res://prefabs/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://prefabs/exitdoor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/ExitDoor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://prefabs/tripwire.tscn" type="PackedScene" id=4]
-[ext_resource path="res://prefabs/button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://prefabs/Button.tscn" type="PackedScene" id=5]
 
 [node name="Level_4" type="Node2D"]
 script = ExtResource( 1 )
@@ -15,20 +15,17 @@ LEVEL_NAME = "Access Point"
 position = Vector2( -152, -360 )
 collision_mask = 9
 RECIEVER_ID = 1
-RESTART_TARGET = "res://levels/Level_3.tscn"
 IS_RECIEVER = false
 
 [node name="tripwire2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 259.675, -285.439 )
 rotation = -1.309
 collision_mask = 9
-RESTART_TARGET = "res://levels/Level_3.tscn"
 
 [node name="tripwire3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 456, -304 )
 rotation = 1.83259
 collision_mask = 9
-RESTART_TARGET = "res://levels/Level_3.tscn"
 
 [node name="button" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1023.96, -64.3678 )

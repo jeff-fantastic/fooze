@@ -312,7 +312,7 @@ script = ExtResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 181.224, 73.6222 )
 frames = SubResource( 61 )
-frame = 33
+frame = 48
 playing = true
 
 [node name="Play" type="Button" parent="."]

@@ -122,7 +122,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=25]
-extents = Vector2( 32, 32 )
+extents = Vector2( 64, 64 )
 
 [sub_resource type="CircleShape2D" id=26]
 radius = 160.0
@@ -131,17 +131,20 @@ radius = 160.0
 script = ExtResource( 5 )
 
 [node name="vis" type="AnimatedSprite" parent="."]
-scale = Vector2( 2, 2 )
+position = Vector2( -1, -32 )
+scale = Vector2( 4, 4 )
 frames = SubResource( 18 )
 animation = "idle"
 playing = true
 
 [node name="pop" type="AnimatedSprite" parent="."]
 visible = false
-scale = Vector2( 2, 2 )
+position = Vector2( 0, -29 )
+scale = Vector2( 4, 4 )
 frames = SubResource( 24 )
 
 [node name="col" type="CollisionShape2D" parent="."]
+position = Vector2( -1, -32 )
 shape = SubResource( 25 )
 
 [node name="radius" type="Area2D" parent="col"]

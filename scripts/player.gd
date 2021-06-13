@@ -39,6 +39,9 @@ func _physics_process(_delta):
 	if PLAYER_STATE == STATES.SUCK:
 		mode = RigidBody2D.MODE_STATIC
 		global_position = lerp(global_position, SUCK_TARGET, 0.1)
+	if Input.is_action_just_pressed("ui_restart"):
+		self.PLAYER_STATE = self.STATES.DISABLED
+		Transit.change_scene(get_tree().current_scene.filename, 0.5)
 
 func move():
 	if Input.is_action_pressed('ui_right'):
