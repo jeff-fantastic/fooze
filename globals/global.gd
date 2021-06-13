@@ -1,6 +1,7 @@
 extends Node2D
 
 var Scale = 2
+var zark = false
 var IsFullscreen = true
 var save_path = "res://config/conf.cfg"
 var config = ConfigFile.new()
